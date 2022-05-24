@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset ="utf-8"/>
+		<link rel="stylesheet" href="programmation.css"/>
+		<title>programmation</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="titre"><marquee loop="2"scrollamount="10" behavior="slide"><em>bienvenue dans le monde informatique!!!</em></marquee></h1>
+			<p><label for="research" ><span><em><strong><color class="col">Recherche :</color></strong></em></span></label><input type="recherche" name="research" id="research" size="50" placeholder="ex : www.open computer science.com"/></p>
+			<p class="op"><em><strong><a href="index.html">accueil</a></strong></em></p>
+		</header>
+		
+		<nav>
+			<p><em><strong><a href="programmation.html">1.programmation</a></strong></em></p>
+			<p><em><strong><a href="bureautique.html">2.bureautique</a></strong></em></p>
+			<p><em><strong><a href="l'informatique de base.html">3.l'informatique de base</a></strong></em></p>	
+		</nav>
+		
+		<section>
+			<aside>
+				<p>	
+					<em>
+						<strong>
+							Le C a été conçu en 1972 par Dennis Richie et Ken Thompson, chercheurs aux Bell Labs,</br> 		
+							afin de développer un système d'exploitation UNIX sur un DEC PDP-11. En 1978, Brian Kernighan</br> 
+							et Dennis Richie publient la définition classique du C dans le livre The C Programming language [6].</br> 
+							Le C devenant de plus en plus populaire dans les années 80, plusieurs groupes mirent sur le marché</br> 
+							des compilateurs comportant des extensions particulières. En 1983, l'ANSI (American National Standards</br> 
+							Institute) décida de normaliser le langage ; ce travail s'acheva en 1989 par la définition de la norme </br>
+							ANSI C. Celle-ci fut reprise telle quelle par l'ISO</br>
+							(International Standards Organization) en 1990. C'est ce standard, ANSI C, qui est décrit dans le</br> 
+							présent document.</br>
+						</strong>
+					</em>
+				</p>	 
+			</aside>
+			<article>
+				<h3><ul>2 La compilation</ul></h3>
+				<h4>
+					<strong>
+						<em>
+							Le C est un langage compilé (par opposition aux langages interprétés). Cela signifie qu'un programme </br>  
+							C est décrit par un fichier texte, appelé fichier source. Ce fichier n'étant évidemment pas exécutable </br> 
+							par le microprocesseur, il faut le traduire en langage machine. Cette opération est effectuée par un</br> 
+							programme appelé compilateur. La compilation se décompose en fait en 4 phases successives :</br> 
+							
+							<color>1. Le traitement par le préprocesseur :</color> le fichier source est analysé par le préprocesseur qui </br>
+							effectue des transformations purement textuelles (remplacement de chaînes de caractères, inclusion</br>
+							d'autres fichiers source</br>
+							
+							<color>2. La compilation :</color> la compilation proprement dite traduit le fichier généré par le préprocesseur en</br>
+							assembleur, c'est-à-dire en une suite d'instructions du microprocesseur qui utilisent des mnémoniques</br>
+							rendant la lecture possible.</br>
+							
+							<color>3. L'assemblage :</color> cette opération transforme le code assembleur en un fichier binaire, c'est-à-dire </br>
+							en instructions directement compréhensibles par le processeur. Généralement, la compilation et l'assemblage</br>
+							se font dans la foulée, sauf si l'on spécifie explicitement que l'on veut le code assembleur. Le fichier </br>
+							produit par l'assemblage est appelé fichier objet.</br>
+							
+							<color>4. L'édition de liens :</color> un programme est souvent séparé en plusieurs fichiers source, pour des raisons de</br>
+							clarté mais aussi parce qu'il fait généralement appel à des librairies de fonctions standard déjà écrites.</br>
+							Une fois chaque code source assemblé, il faut donc lier entre eux les différents fichiers objets. L'édition</br>
+							de liens produit alors un fichier dit exécutable.</br>
+							Les différents types de fichiers utilisés lors de la compilation sont distingués par leur suffixe. Les </br>
+							fichiers source sont suffixés par .c, les fichiers prétraités par le préprocesseur par .i, les fichiers </br>
+							assembleur par .s, et les fichiers objet par .o. Les fichiers objets correspondant aux librairies précompilées</br>
+							ont pour suffixe .a.</br>
+							Le compilateur C sous UNIX s'appelle cc. On utilisera de préférence le compilateur gcc du projet GNU. Ce</br>
+							compilateur est livré gratuitement avec sa documentation et ses sources. Par défaut, gcc active toutes les </br>
+							étapes de la compilation. On le lance par la commande gcc [options] fichier.c [-llibrairies]</br>
+							Par défaut, le fichier exécutable s'appelle a.out. Le nom de l'exécutable peut être modifié à l'aide de l'option -o.</br>
+							Les éventuelles librairies sont déclarées par la chaîne -llibrairie. Dans ce cas, le système recherche le fichier</br>
+							liblibrairie.a dans le répertoire contenant les librairies pré-compilées (généralement /usr/lib/). Par exemple,</br>
+							pour lier le programme avec la librairie mathématique, on spécifie -lm. Le fichier objet correspondant est libm.a.</br>
+							Lorsque les librairies pré-compilées ne se trouvent pas dans le répertoire usuel, on spécifie leur chemin d'accès </br>
+							par l'option -L.</br>
+							Les options les plus importantes du compilateur gcc sont les suivantes :</br>
+							-c : supprime l'édition de liens ; produit un fichier objet.</br>
+							-E : n'active que le préprocesseur (le résultat est envoyé sur la sortie standard).</br>
+							-g : produit des informations symboliques nécessaires au débogueur.</br>
+							-Inom-de-répertoire : spécifie le répertoire dans lequel doivent être recherchés les fichiers en-têtes à inclure </br>
+							(en plus du répertoire courant).</br>
+							Lnom-de-répertoire : spécifie le répertoire dans lequel doivent être recherchées les librairies précompilées</br>
+							(En plus du répertoire usuel).</br>
+							-o nom-de-fichier : spécifie le nom du fichier produit. Par défaut, le exécutable fichier s'appelle a.out.</br>
+							-O, -O1, -O2, -O3 : options d'optimisations. Sans ces options, le but du compilateur est de minimiser le coût </br>
+							de la compilation. En rajoutant l'une de ces options, le compilateur tente de réduire la taille du code exécutable </br>
+							et le temps d'exécution. Les options correspondent à différents niveaux d'optimisation : -O1</br>
+							(Similaire à -O) correspond à une faible optimisation, -O3 à l'optimisation maximale.</br>
+							-S : n'active que le préprocesseur et le compilateur ; produit un fichier assembleur.</br>
+							-v : imprime la liste des commandes exécutées par les différentes étapes de la compilation.</br>
+							-W : imprime des messages d'avertissement (warning) supplémentaires.</br>
+							-Wall : imprime tous les messages d'avertissement.</br>
+						</em>
+					</strong>
+					<h3><ul>3.Les composants élémentaires du C</ul></h3>
+					<strong>
+						Un programme en langage C est constitué des six groupes de composants élémentaires suivants :</br>
+						<em class="stop">• les identificateurs,</em></br>
+						<em class="stop">• les mots-clefs,</em></br>
+						<em class="stop">• les constantes,</em></br>
+						<em class="stop">• les chaînes de caractères,</em></br>
+						<em class="stop">• les opérateurs,</em></br>
+						<em class="stop">• les signes de ponctuation.</em></br>
+					concernant le langage c on prend juste une petite exemple:</br>
+					<p><img src="beby.png" align="top" width="600" height="280"/></p>
+					</strong>
+				</h4>
+			<h2>LE HTML</h2>
+			<p>
+				<em><strong>
+					Le langage HTML tire son origine du langage SGML (Standard Generalized Markup Language).</br>
+					Il s'agit d'un type particulier d'annotations destiné au WWW et qui correspond à une col</br>
+					lection de styles reconnaissables par les navigateurs. Un navigateur (en anglais "browser") </br>
+					est donc un logiciel qui interprète à l'écran les Commandes HTML contenues dans un document</br>
+					accessible sur le WWW.</br>
+					Le langage HTML est utilisé sur le WWW depuis 1990. La version actuellement en vigueur est</br>
+					HTML 2.0. Des discussions sont en cours (voir le document de Berners-Lee et Connolly en </br>
+					bibliographie) pour l'adoption des nouvelles annotations pour une version HTML 3.0 notamment</br>
+					en matière de tableaux et de commandes de formatage définissant les exposants et indices.</br>
+					Le html c’est n’est rien d’autre qu’une abréviation du terme « hyper text markup language en</br>
+					français c’est un langage de balisage hyper texte, au fait pour mieux comprendre le langage </br>
+					html il suffit de comprendre d’autres langages de programmation, quand je suis en entrain de </br>
+					dire ça, c’est parce que chaque langage de programmation as ses propres syntaxes ou ses normes,</br>
+					donc le html aussi c’est le cas, comme la définition l’indique pour comprendre les fonctionnements</br>
+					de ce langage de programmation il suffit de bien comprendre les balises, tout comme pour bien comprendre</br>
+					le langage c il faut savoir ce quoi les directives, ce quoi la fonction, comment déclarer une variable</br>
+					du type entier, du type flottant…</br>
+					juste un exemple concernant les differentes balises des bases :</br>
+					<p><img src="grand.png" align="top" width="800" height="380"/></p>
+				</strong></em>
+			</p>
+			</article>
+		</section>
+		
+		<footer>
+			<p><a href="ocs programmation en html.zip">ocs html5 pdf</p>
+			<p><a href="ocs programmation en langage c.zip">ocs langage c pdf</p>
+		</footer>
+	</body>
+</html>	

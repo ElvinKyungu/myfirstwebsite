@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="crée un compte.css" />
+		<title>formulaire</title>
+	</head>
+	<body>
+		<header>
+		<h1 class="titre"><marquee loop="5"scrollamount="10" behavior="slide"><em>crée votre compte sur notre site!!</em></marquee></h1>
+		<p><a href="index.html" /><em><strong class="bi">acceuil</strong></em></a></p>
+		</header>
+		<body>
+			<h2><em>Crée votre vompte</em></h2>
+			<form method="post" action="traitement.php">
+				<p>
+				<fieldset class="vinho">
+				<h3 type="center"><legend type="info"><em><strong>remplissez ce formulaire pour crée votre compte</strong></em></legend></h3>
+				<fieldset class="ident">
+						<legend class="info"><em><strong>identité</strong></em></legend>
+						<label for="nom">Nom:</label>
+						<input type="text" name="nom" id="nom" size="18" placeholder="ex: kyungu"/></br>
+						<label for="prenom">Prenom:</label>
+						<input type="text" name="prenom" id="prenom" size="20" placeholder="ex: ngoy"/></br>
+						<label for="numero">code postal:</label>
+						<input type="code pays" name="code postal" id="code postal" size="20" maxlength="10" placeholder="ex:+243"/></br>
+						<label for="numero">Numero:</label>
+						<input type="tel" name="numero" id="numero" size="20" maxlength="10" placeholder="ex:971886813"/></br>
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" size="28" placeholder="Ex: elvinkyungu.75@gmail.com"/></br>
+						<label for="sexe">Sexe:</label>
+						<input type="radio" name="sexe" id="sexe"/>
+						<label for="sexe">Masculin</label>
+						<input type="radio" name="sexe" id="sexe"/>
+						<label for="sexe">Feminin</label></br>
+						<label for="sexe">date de naissance</label>
+						<input type="date" name="date" id="date"/>
+					</fieldset>			
+			<fieldset class="ident">
+					<legend class="sing"><em><strong>Mot de passe</strong></em></legend>
+					<label for="passe">Nouveau mot de passe</label>
+					<input type="password" name="passe" id="passe" size="20"/></br>
+					<label for="confirmer">Confirmer le mot de passe</label>
+					<input type="password" name="passe" id="passe" size="20"/>
+			</fieldset>
+					<input type="submit" name="crée" id="crée" value="crée"/>
+					<input type="reset" name="reinitialiser" id="reinitialiser"/>
+				</fieldset>
+				</p>
+			</form>
+	</body>
+</html>	
+	

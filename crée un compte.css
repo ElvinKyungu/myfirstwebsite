@@ -1,0 +1,47 @@
+body
+{
+	background-color:rgb(0,255,255);
+}
+h2
+{
+	background-color:black;
+	height:30px;
+	width:200px;
+	color:red;
+}
+h3
+{
+	background-color:black;
+	text-align:center;
+	color:red;
+	width:400px;
+}
+.vinho
+{
+	width:400px;
+}
+.info
+{
+	background-color:black;
+	color:red;
+	width:50px;
+}
+.sing
+{
+	background-color:black;
+	color:red;
+	width:88px;
+}
+.titre
+{
+	background-color:black;
+	color:white;
+}
+header
+{
+	background-color:blue;
+}
+.bi
+{
+	color:white;
+}
